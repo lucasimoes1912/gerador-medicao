@@ -1,0 +1,13 @@
+# Gerador de relatórios
+
+    Criei esse programa para facilitar a passagem da tarefa de faturamento.
+O programa torna o processo de emissão para faturamento mais simples e dedutivo,
+acelerando o processo e reduzindo o erro humano.
+    O programa funciona da seguinte forma. Uma base de dados é inserida em um arquivo JSON com as informações do fornecedor 
+e a partir dessa base de dados o programa dispões as opções que são possíveis para selecionar e traz as informações fixas
+correspondentes ao fornecedor selecionado. Após esse processo é necessário que as informações dos documentos que vão ser
+enviados para emissão sejam inseridas nos seus respectivos campos.
+    Após o preenchimento das informações o programa disponibiliza duas opções: Apagar o lote ou inserir no lote. Selecionando
+a opção de inserir no lote ele vai compilando as informações e deixando formatadas como tabela. Ao final do processo o programa
+gera um e-mail de acordo com o modelo que eu estabeleci e que uso na minha empresa, onde as informações dos documentos e os documentos
+são enviados para a equipe fiscal afim de realizar as emissões.

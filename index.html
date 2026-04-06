@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <title>Gerador de medição</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <h1>Gerador de medição</h1>
+
+    <form id="medicaoForm">
+        <fieldset>
+            <legend>Identificação</legend>
+
+            <label>
+                CNPJ
+                <select id="cnpj" required>
+                    <option value="">Selecione o CNPJ</option>
+                </select>
+            </label>
+
+            <label>
+                Localidade
+                <selec id="localidade" required disable>
+                    <option value="">Selecione a localidade</option>
+                </selec>
+            </label>
+            
+            <label>
+                ICJ
+                <input type="text" id="icj" required/>
+            </label>
+            
+            <label>
+                Contrato
+                <input type="text" id="contrato" required />
+            </label>
+
+            <label>
+                Pedido
+                <input type="text" id="pedido" required />
+            </label>
+
+            <label>
+                FRS
+                <input type="text" id="frs" required />
+            </label>
+
+            <label>
+                NL
+                <input type="text" id="frs" required />
+            </label>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Período de medição e Valor</legend>
+
+            <label>
+                Início da medição
+                <input type="date" id="periodoInicio" required />
+            </label>
+
+            <label>
+                Fim da medição
+                <input type="date" id="periodoFim" required />
+            </label>
+
+            <label>
+                Valor bruto (R$)
+                <input type="number" id="valorBruto" step="0.01" required />
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Anexo</legend>
+            <input type="file" id="pdfOriginal" accept="application/pdf" />
+            <small>(Opcional: Só para lembrar o arquivo de cada medição)</small>
+        </fieldset>
+
+        <div class="actions">
+            <button type="button" id="adicionarLote">Adicionar ao lote</button>
+            <button type="button" id="limparFormulario">Limpar formulário</button>
+        </div>
+
+    </form>
+
+    <hr />
+
+    <h2>Lote de medição</h2>
+
+    <div class="batch-actions">
+        <button type="button" id="copiarEmailLote">Copiar e-mail do lote</button>
+        <button type="button" id="limparLote">Limpar lote</button>
+    </div>
+
+    <p><strong>Total de itens:</strong> <sapn id="totalItens">0</sapn></p>
+    <p><strong>Total valor bruto:</strong> R$ <span id="totalValor">0,00</span></p>
+
+    <div class="table-wrap">
+        <table id="tabelaLote">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>CNPJ</th>
+                    <th>Localidade</th>
+                    <th>OS</th>
+                    <th>ICJ</th>
+                    <th>Contrato</th>
+                    <th>Pedido</th>
+                    <th>FRS</th>
+                    <th>NL</th>
+                    <th>Período</th>
+                    <th>Valor Bruto</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+<script src="main.js"></script>
+</body>
+</html>
